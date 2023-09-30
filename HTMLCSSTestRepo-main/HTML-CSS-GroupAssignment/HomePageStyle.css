@@ -1,0 +1,95 @@
+.pageheader{
+    padding:10px;
+    background-color:#505050;
+    text-align: right;
+    font-weight: bolder;
+    margin: 0%;
+    
+}
+h1{
+    font-size:xx-large;
+    color: white;
+    padding-right:10%;
+}
+h3{
+    font-size:large;
+    color: white;
+    text-align: center;
+    
+}
+
+.pagefooter{
+    background-color: #000000;
+    margin: 0%;
+    padding: 10px;
+}
+nav{
+    position: sticky;
+    top: 0;
+    background-color:#7F7F7F;
+}
+body{
+    background-color: #FFFFFF;
+}
+.menu {
+    background-color: #7F7F7F;
+    margin: 0;
+    padding: 1;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.dropdown1,.dropdown2{
+    display: none;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    padding:0;
+    background-color:#F5F5F5;
+    top:43px;
+}
+
+.menu li:hover {
+    background-color: black;
+}
+
+.menu li:nth-child(2):hover .dropdown1,
+.menu li:nth-child(3):hover .dropdown2{
+    display: block;
+}
+
+.dropdown1 li,
+.dropdown2 li{
+    display: block;
+   
+   
+}
+
+.dropdown1 li a,
+.dropdown2 li a{
+    color:steelblue;
+    font-size: 16px;
+   
+}
+
+
+.dropdown1 li:hover,
+.dropdown2 li:hover{
+    background-color: gainsboro;
+}
+
+#navigate{
+    position: -webkit-sticky;
+    z-index: 1;
+    top:0;
+}

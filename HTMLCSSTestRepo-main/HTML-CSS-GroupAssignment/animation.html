@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+       .image-container{
+        margin: 3px;
+        text-align: center;
+        border: 2px solid steelblue; 
+        animation: myAnimations infinite; 
+        animation-duration: 40s; 
+     }
+     img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain;
+    }
+    /* @keyframes myAnimations{
+        0%{ background-image:url(./Images/Animation/ani1.jpg);
+         background-size: contain;
+        }
+        25%{
+            background-image:url(./Images/Animation/ani2.jpg); 
+            background-size: contain;
+        }
+        50%{
+            background-image:url(./Images/Animation/ani3.jpg);
+            background-size: contain;
+        }
+        75%{
+            background-image:url(./Images/Animation/ani4.jpg);
+            background-size: contain;
+        }
+        100%{
+            background-image:url(./Images/Animation/ani5.jpg);
+            background-size: contain;
+        }
+    } */
+     
+
+    </Style>
+</head>
+
+<body>
+
+    <div class="image-container">
+       
+        <img class="mySlides" src="./Images/Animation/ani1.jpg" alt = "animation1">
+        <img class="mySlides" src="./Images/Animation/ani2.png" alt = "animation2">
+        <img class="mySlides" src = "./Images/Animation/ani3.jpg" alt = "animation3">
+        <img class="mySlides" src = "./Images/Animation/ani4.jpg" alt = "animation4">
+        <img class="mySlides" src="./Images/Animation/ani5.jpg"  alt= "animation5">
+    
+
+    </div>
+    <script>
+        let myIndex=0;
+        changeImage();
+
+        function changeImage(){
+            let imageElement=document.getElementsByClassName("mySlides");
+            for (let i=0;i<imageElement.length;i++){
+                imageElement[i].style.display="none";
+            }
+            myIndex++;
+            if(myIndex>imageElement.length){
+                myIndex=1;
+            }
+            imageElement[myIndex-1].style.display="block";
+            setTimeout(changeImage,2000);
+        }
+        </script>
+
+    
+</body>
+</html>
